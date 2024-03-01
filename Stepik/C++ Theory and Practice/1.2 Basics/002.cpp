@@ -6,7 +6,7 @@ int main() {
     std::cout << "Enter integer number: ";
     std::cin >> n;
 
-    std::cout << "Your number is: " << n << "\n\n";
+    std::cout << "You entered: " << n << "\n\n";
 
     system("pause");
     return 0;
