@@ -1,15 +1,19 @@
 #include <iostream>
 using std::cout;
 
-/*
-1 2 3 4         0 0 0 1
-5 6 7 8         1 1 1 2
-9 10 11 12      2 2 2 3
-*/
-
 int main() {
-    int seat;
+    size_t seat;
+    size_t result = 1;
+    int counter = 0;
     std::cin >> seat;
-    cout << (seat % 4) ? seat / 4 + 1 : seat / 4;
-    return 0;
+
+    for (size_t i = 1; i <= seat; i++) {
+        if (counter == 4) {
+            ++result;
+            counter = 0;
+        }
+        ++counter; 
+    }
+
+    cout << result;
 }
