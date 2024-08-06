@@ -6,7 +6,7 @@ int main(void)
 {
     int digs[TOTAL] = {0};
     size_t count = 0;
-    size_t sz_ar = sizeof(digs) / sizeof(*digs);
+    size_t sz_ar = sizeof digs / sizeof *digs;
 
     while (count < sz_ar && scanf("%d", &digs[count]) == 1)
         count++;
@@ -20,6 +20,7 @@ int main(void)
         }
     }
 
+    count = count < TOTAL ? count : TOTAL;
     for (int i = 0; i < count; ++i)
         printf("%d ", *(digs + i));
 
