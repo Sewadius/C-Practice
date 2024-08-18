@@ -4,7 +4,7 @@
 #define PROMPT_2 "Enter the second float number: "
 #define RESULT "Result of the sum: "
 
-// Вычисление суммы двух вещественных чиселел
+// Вычисление суммы двух вещественных чисел
 int main(void)
 {
     float a1, a2;
