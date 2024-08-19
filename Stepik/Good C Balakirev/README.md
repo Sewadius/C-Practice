@@ -10,5 +10,8 @@
 #### 2.7 Modulo division operations
 - *_001.c* Divide ultil number % 2 == 0
 
+#### 3.6 Generation of random numbers  
+- *_001.c* Asked number of 6 dice throws   
+
 #### 5.9 String functions 1
 - *_001.c*: Output the length of the entered string with spaces

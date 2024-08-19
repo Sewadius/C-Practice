@@ -6,7 +6,6 @@ int main(void)
 {
     srand(time(NULL));
     int range = 10;
-
     
     int r_1 = rand() % range;       // Диапазон [0; 9)       
     int r_2 = rand() % range - 5;   // Диапазон [-5; range - 5)

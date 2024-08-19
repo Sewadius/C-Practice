@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    srand(10);
+    srand(10);  // Установка зерна генерации
 
     int r_1 = rand();
     int r_2 = rand();
