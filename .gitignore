@@ -1,1 +1,6 @@
-*.exe
+*
+!*.c
+!*.h
+!*.cpp
+!*.hpp
+!Makefile
