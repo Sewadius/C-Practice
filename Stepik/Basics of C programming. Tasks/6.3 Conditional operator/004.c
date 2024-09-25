@@ -6,8 +6,8 @@ int main() {
     double distance_1, distance_2;
 
     scanf("%hd %hd %hd %hd", &x1, &y1, &x2, &y2);
-    distance_1 = pow((double)x1 * x1 + y1 * y1, .5);
-    distance_2 = pow((double)x2 * x2 + y2 * y2, .5);
+    distance_1 = hypot(x1, y1);
+    distance_2 = hypot(x2, y2);
 
     printf("%s\n", distance_1 > distance_2 ? "2" : 
         distance_1 == distance_2 ? "0" : "1");
