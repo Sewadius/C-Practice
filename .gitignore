@@ -1,0 +1,37 @@
+*
+!*/
+!*.*
+
+# Исполняемые файлы (все платформы)
+*.exe         # Windows
+*.out         # Linux/Unix (типичное имя для скомпилированных бинарных файлов)
+*.app         # macOS (папка‑приложение)
+
+# Объектные файлы и библиотеки
+*.o           # объектные файлы (Linux/Unix)
+*.obj         # объектные файлы (Windows)
+*.a           # статические библиотеки (Linux/Unix)
+*.lib         # статические библиотеки (Windows)
+*.so          # динамические библиотеки (Linux/Unix, Shared Object)
+*.dll         # динамические библиотеки (Windows, Dynamic‑Link Library)
+*.dylib       # динамические библиотеки (macOS, Dynamic Library)
+
+# Папки сборки
+build/
+cmake-build-*/
+_build/
+
+# Файлы IDE и редакторов
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Логи и временные файлы
+*.log
+*.tmp
+
+# Система контроля версий (кроме самого .gitignore)
+*.orig
+*.rej
