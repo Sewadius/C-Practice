@@ -1,4 +1,4 @@
-// Page 225 - круги в качестве объектов
+// Page 231 - "круг" и конструкторы
 #include <ncurses.h>
 
 // Перечисление цветов ncurses (упрощённое)
@@ -15,14 +15,9 @@ private:
     char fillchar;      // Символ для заливки
 
 public:
-    // Установка атрибутов круга
-    void set(int x, int y, int r, color fc, char symbol = '*') {
-        xCo = x;
-        yCo = y;
-        radius = r;
-        fillcolor = fc;
-        fillchar = symbol;
-    }
+    // Конструктор
+    Circle(int x, int y, int r, color fc, char symbol = '*') :
+        xCo(x), yCo(y), radius(r), fillcolor(fc), fillchar(symbol) {}
 
     // Рисование круга псевдографикой
     void draw() {
@@ -63,12 +58,11 @@ int main() {
         init_pair(cGREEN, COLOR_GREEN, COLOR_BLACK);
     }
     
-    Circle c1, c2, c3;      // Создаём круги
-    
-    // Устанавливаем атрибуты кругов
-    c1.set(15, 7, 5, cBLUE, '*');
-    c2.set(41, 12, 7, cRED, '#');
-    c3.set(65, 18, 4, cGREEN, '+');
+    // Создаём круги с помощью конструктора
+    Circle 
+        c1(15, 7, 5, cBLUE, '*'), 
+        c2(41, 12, 7, cRED, '#'), 
+        c3(65, 18, 4, cGREEN, '+');      
     
     // Рисуем круги
     c1.draw(); c2.draw(); c3.draw();
@@ -79,4 +73,3 @@ int main() {
     
     return 0;
 }
-
