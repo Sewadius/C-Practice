@@ -19,7 +19,7 @@ int main() {
     int total_cells = max_y * max_x;
 
     // Действия для каждой позиции на экране
-    for(int count = 0; count < total_cells; count++) {
+    for (int count = 0; count < total_cells; count++) {
         // Рассчитываем координаты
         int y = count / max_x;
         int x = count % max_x;
@@ -28,12 +28,12 @@ int main() {
         unsigned char ch = WHITE;
 
         // Проверяем, является ли число простым
-        if(count < 2) {
+        if (count < 2) {
             // 0 и 1 не являются простыми числами
             ch = GRAY;
         } else {
             // Делим на каждое целое, начиная с 2
-            for(int j = 2; j * j <= count; j++) {  // оптимизация: проверяем до sqrt(count)
+            for (int j = 2; j * j <= count; j++) {  // оптимизация: проверяем до sqrt(count)
                 if(count % j == 0) {  // если остаток равен 0
                     ch = GRAY;        // то число не простое
                     break;            // выход из внутреннего цикла

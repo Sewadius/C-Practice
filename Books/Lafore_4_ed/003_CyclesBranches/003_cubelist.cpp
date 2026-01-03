@@ -1,4 +1,4 @@
-// Page 98 - кубы целых числе от 1 до 10
+// Page 98 - кубы целых чисел от 1 до 10
 #include <iostream>
 #include <iomanip>
 using namespace std;
