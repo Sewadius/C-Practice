@@ -109,3 +109,4 @@ int main()
     endwin();       // завершение работы с ncurses
     return 0;
 }
+

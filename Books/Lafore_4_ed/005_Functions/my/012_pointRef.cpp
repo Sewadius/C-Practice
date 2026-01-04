@@ -11,10 +11,10 @@ struct Point {
 	double y;
 };
 
-void movePoint(Point&, double, double);
-void scalePoint(Point&, double);
-void rotatePoint(Point&, double);
-void displayPoint(const Point&);
+void movePoint(Point&, double, double);		// Сдвиг точки
+void scalePoint(Point&, double); 			// Масштабирование
+void rotatePoint(Point&, double);			// Поворот точки
+void displayPoint(const Point&);			// Вывод на экран
 
 int main() {
 	Point p1 {"A", 2.0, 3.0 };
