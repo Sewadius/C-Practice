@@ -3,22 +3,38 @@
 #include <climits>
 using namespace std;
 
-#define ZERO 0
+const short ZERO = 0;
+
+void printInfo(short, unsigned short);
 
 int main() {
-    short sam = SHRT_MAX;
-    unsigned short sue = sam;
+    short sam = SHRT_MAX;           // Знаковый тип
+    unsigned short sue = sam;       // Беззнаковый тип
 
-    cout << "Sam has " << sam << " dollars and Sue has "
-        << sue << " dollars deposited.\n";
+    printInfo(sam, sue);
 
     cout << "Add $1 to each account.\n";
 
     sam += 1; sue += 1;
 
-    cout << "Now Sam has " << sam << " dollars and Sue has "
-        << sue << " dollars deposited. \nPoor Sam!\n";
+    printInfo(sam, sue);
+    cout << "Poor Sam!\n";
+
+    sam = ZERO; sue = ZERO;
+    printInfo(sam, sue);
+
+    cout << "Take $1 from each account.\n";
+    sam -= 1; sue -= 1;
+
+    printInfo(sam, sue);
+    cout << "Lucky Sue!\n";
 
     return 0;
+}
+
+// Отображение информации о балансе
+void printInfo(short sam, unsigned short sue) {
+    cout << "Sam has " << sam << " dollars and Sue has "
+        << sue << " dollars deposited.\n";
 }
 
